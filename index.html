@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dileep Gowtham - Bioinformatics Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-dark: #0a0e27;
+            --bg-secondary: #141829;
+            --accent-teal: #00d9ff;
+            --accent-blue: #0099ff;
+            --accent-green: #00ff88;
+            --text-primary: #ffffff;
+            --text-secondary: #b0bec5;
+            --border-color: rgba(0, 217, 255, 0.2);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--bg-dark) 0%, #0f1533 100%);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 14, 39, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            background: linear-gradient(135deg, var(--accent-teal), var(--accent-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            color: var(--accent-teal);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            padding: 4rem 2rem;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0, 217, 255, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            top: -100px;
+            right: -100px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(0, 255, 136, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            bottom: -100px;
+            left: -100px;
+            animation: float 8s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(20px); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            animation: slideUp 0.8s ease-out;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            color: var(--accent-teal);
+            margin-bottom: 1.5rem;
+            animation: slideUp 0.8s ease-out 0.2s both;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            animation: slideUp 0.8s ease-out 0.4s both;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: slideUp 0.8s ease-out 0.6s both;
+        }
+
+        .btn {
+            padding: 0.85rem 1.8rem;
+            border-radius: 50px;
+            border: none;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-teal), var(--accent-blue));
+            color: var(--bg-dark);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 217, 255, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--accent-teal);
+            border: 2px solid var(--accent-teal);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(0, 217, 255, 0.1);
+            transform: translateY(-3px);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, var(--accent-teal), transparent);
+            border-radius: 2px;
+        }
+
+        /* About Section */
+        .about {
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.05) 0%, transparent 100%);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 1.3rem;
+            color: var(--accent-teal);
+            margin-bottom: 1rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .education {
+            background: rgba(0, 99, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--accent-blue);
+            margin-top: 1.5rem;
+        }
+
+        .education h4 {
+            color: var(--accent-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-category {
+            background: rgba(0, 217, 255, 0.05);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .skill-category:hover {
+            background: rgba(0, 217, 255, 0.1);
+            transform: translateY(-5px);
+            border-color: var(--accent-teal);
+            box-shadow: 0 10px 30px rgba(0, 217, 255, 0.1);
+        }
+
+        .skill-category h4 {
+            color: var(--accent-green);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            padding: 0.5rem 0;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-list li::before {
+            content: '→';
+            color: var(--accent-teal);
+            font-weight: bold;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: rgba(20, 24, 41, 0.8);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, transparent, rgba(0, 217, 255, 0.1), transparent);
+            transition: top 0.3s ease;
+        }
+
+        .project-card:hover {
+            border-color: var(--accent-teal);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 217, 255, 0.15);
+        }
+
+        .project-card:hover::before {
+            top: 100%;
+        }
+
+        .project-card h3 {
+            color: var(--accent-teal);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            position: relative;
+            z-index: 5;
+        }
+
+        .project-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+            position: relative;
+            z-index: 5;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 5;
+        }
+
+        .tech-tag {
+            background: rgba(0, 217, 255, 0.15);
+            color: var(--accent-teal);
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            border: 1px solid rgba(0, 217, 255, 0.3);
+        }
+
+        .project-link {
+            display: inline-block;
+            color: var(--accent-teal);
+            text-decoration: none;
+            font-weight: 600;
+            position: relative;
+            z-index: 5;
+            transition: all 0.3s ease;
+        }
+
+        .project-link:hover {
+            color: var(--accent-green);
+            transform: translateX(5px);
+        }
+
+        /* Certificates Section */
+        .certificates-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .cert-card {
+            background: linear-gradient(135deg, rgba(0, 255, 136, 0.08) 0%, rgba(0, 153, 255, 0.08) 100%);
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-green);
+            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.15);
+        }
+
+        .cert-card h4 {
+            color: var(--accent-green);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .cert-issuer {
+            color: var(--accent-blue);
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .cert-year {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            text-align: center;
+            background: linear-gradient(135deg, rgba(0, 153, 255, 0.05) 0%, transparent 100%);
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin: 3rem 0;
+        }
+
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .contact-value {
+            color: var(--accent-teal);
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .contact-value:hover {
+            color: var(--accent-green);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 217, 255, 0.1);
+            border: 2px solid var(--accent-teal);
+            color: var(--accent-teal);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.3rem;
+        }
+
+        .social-link:hover {
+            background: var(--accent-teal);
+            color: var(--bg-dark);
+            transform: translateY(-5px);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info {
+                gap: 1.5rem;
+                flex-direction: column;
+            }
+
+            section {
+                padding: 3rem 1rem;
+            }
+        }
+
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">DG</div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Dileep Gowtham</h1>
+            <p class="subtitle">Biotechnology Graduate | Bioinformatics Enthusiast</p>
+            <p>Exploring opportunities in bioinformatics with a passion for genomic data analysis and machine learning</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                <a href="https://github.com/gowtham-bioinfo" target="_blank" class="btn btn-secondary">View GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Who Am I?</h3>
+                <p>I'm a recent Biotechnology graduate from India with a keen interest in bioinformatics and computational biology. Currently exploring opportunities to contribute my skills in genomic data analysis, machine learning, and bioinformatics research.</p>
+                <p>My journey in bioinformatics started with a fascination for understanding complex biological systems through data. I've developed expertise in Python-based analysis, gene expression studies, and cancer genomics classification.</p>
+                <p>As a fresh graduate, I'm eager to apply my theoretical knowledge and practical skills to real-world bioinformatics challenges and contribute meaningfully to research initiatives.</p>
+                <div class="education">
+                    <h4>📚 Education</h4>
+                    <p><strong>BSc Biotechnology</strong></p>
+                    <p style="color: var(--text-secondary); margin: 0.5rem 0;">Fresh Graduate | India</p>
+                </div>
+            </div>
+            <div class="about-text">
+                <h3>Location & Contact</h3>
+                <p><strong>📍 Bangalore, India</strong></p>
+                <p>Open to opportunities in bioinformatics research, genomic analysis, and computational biology roles.</p>
+                <h3 style="margin-top: 2rem;">Key Focus Areas</h3>
+                <ul class="skill-list" style="color: var(--text-secondary);">
+                    <li>Gene Expression Analysis</li>
+                    <li>Cancer Genomics Classification</li>
+                    <li>Machine Learning in Bioinformatics</li>
+                    <li>Data Visualization</li>
+                    <li>High-Dimensional Data Analysis</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h4>Programming Languages</h4>
+                <ul class="skill-list">
+                    <li>Python</li>
+                    <li>SQL (MySQL)</li>
+                    <li>Git & GitHub</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h4>Data Science & ML</h4>
+                <ul class="skill-list">
+                    <li>Scikit-Learn</li>
+                    <li>Machine Learning</li>
+                    <li>Predictive Modeling</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h4>Data Analysis Tools</h4>
+                <ul class="skill-list">
+                    <li>Pandas</li>
+                    <li>NumPy</li>
+                    <li>Jupyter Notebook</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h4>Visualization & Bioinformatics</h4>
+                <ul class="skill-list">
+                    <li>Matplotlib</li>
+                    <li>Seaborn</li>
+                    <li>Biopython</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h4>Operating Systems</h4>
+                <ul class="skill-list">
+                    <li>Linux</li>
+                    <li>Command Line Tools</li>
+                    <li>System Administration</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h4>Other Tools</h4>
+                <ul class="skill-list">
+                    <li>Excel</li>
+                    <li>Data Preprocessing</li>
+                    <li>Feature Selection</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Cancer Subtype Classifier</h3>
+                <p>A bioinformatics machine learning project that classifies cancer subtypes using gene expression profiles. Applies data preprocessing, feature selection, and predictive modeling to identify patterns in high-dimensional genomic data.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Scikit-Learn</span>
+                    <span class="tech-tag">Machine Learning</span>
+                    <span class="tech-tag">Genomics</span>
+                </div>
+                <a href="https://github.com/gowtham-bioinfo/Cancer-Subtype-Classifier" target="_blank" class="project-link">View on GitHub →</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Cancer Gene Expression Explorer</h3>
+                <p>Developed a bioinformatics project to analyze and visualize cancer gene expression data using Python. Applied data preprocessing, exploratory data analysis, PCA, and data visualization techniques to identify patterns in genomic datasets.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Pandas</span>
+                    <span class="tech-tag">Matplotlib</span>
+                    <span class="tech-tag">PCA Analysis</span>
+                </div>
+                <a href="https://github.com/gowtham-bioinfo/Cancer-Gene-Expression-Explorer" target="_blank" class="project-link">View on GitHub →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates">
+        <h2 class="section-title">Certificates & Credentials</h2>
+        <div class="certificates-list">
+            <div class="cert-card">
+                <h4>🎓 Bioinformatics Methods and Tools Master</h4>
+                <p class="cert-issuer">Issued by Biotecnika</p>
+                <p class="cert-year">Professional certification in advanced bioinformatics methodologies and tools</p>
+            </div>
+            <div class="cert-card">
+                <h4>🧬 Expert NGS + Data Analysis and Interpretation</h4>
+                <p class="cert-issuer">Issued by Biotecnika</p>
+                <p class="cert-year">Advanced training in Next-Generation Sequencing data analysis</p>
+            </div>
+            <div class="cert-card">
+                <h4>💊 Bioinformatics and Drug Discovery</h4>
+                <p class="cert-issuer">Issued by Biotecnika</p>
+                <p class="cert-year">Specialized knowledge in drug discovery applications</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <p style="color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 2rem;">Feel free to reach out for collaborations or just a friendly hello!</p>
+        
+        <div class="contact-info">
+            <div class="contact-item">
+                <span class="contact-label">Email</span>
+                <a href="mailto:dileepgowtham1947@gmail.com" class="contact-value">dileepgowtham1947@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <span class="contact-label">Location</span>
+                <span class="contact-value">Bangalore, India</span>
+            </div>
+            <div class="contact-item">
+                <span class="contact-label">GitHub</span>
+                <a href="https://github.com/gowtham-bioinfo" target="_blank" class="contact-value">gowtham-bioinfo</a>
+            </div>
+        </div>
+
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/dileep-gowtham-074001313" target="_blank" class="social-link" title="LinkedIn">in</a>
+            <a href="https://github.com/gowtham-bioinfo" target="_blank" class="social-link" title="GitHub">⚙</a>
+            <a href="mailto:dileepgowtham1947@gmail.com" class="social-link" title="Email">@</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Dileep Gowtham. Passionate about bioinformatics and genomic data analysis.</p>
+    </footer>
+
+    <script>
+        // Smooth scroll behavior for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.skill-category, .project-card, .cert-card').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
