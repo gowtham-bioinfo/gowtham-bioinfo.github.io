@@ -1,65 +1,49 @@
 # 🧬 Bioinformatics Portfolio – Dileep Gowtham
 
-> A modern portfolio showcasing expertise in **bioinformatics**, **machine learning**, and **genomic data analysis**
-
-[![Portfolio Site](https://img.shields.io/badge/Portfolio-Live-brightgreen?style=flat-square)](https://gowtham-bioinfo.github.io)
-[![GitHub](https://img.shields.io/badge/GitHub-Profile-blue?style=flat-square)](https://github.com/gowtham-bioinfo)
+[![Portfolio Live](https://img.shields.io/badge/Portfolio-Live-brightgreen?style=flat-square)](https://gowtham-bioinfo.github.io)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-blue?style=flat-square)](https://github.com/gowtham-bioinfo)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-informational?style=flat-square)](https://www.linkedin.com/in/dileep-gowtham-074001313)
 
----
+**Biotechnology graduate** passionate about leveraging computational methods to solve complex biological problems. Specialized in genomic data analysis, machine learning for healthcare, and transforming raw sequencing data into actionable insights.
 
-## 👨‍💻 About Me
-
-I'm a **Biotechnology graduate** passionate about leveraging computational methods to solve real-world biological problems. My expertise spans genomic data analysis, machine learning for healthcare, and biological data visualization.
-
-### 🎯 Focus Areas
-- **Genomic Data Analysis** – Processing and interpreting large-scale sequencing datasets
-- **Machine Learning for Biology** – Predictive models for disease classification and biomarker discovery
-- **Data Visualization** – Creating meaningful insights from complex biological datasets
-- **Bioinformatics Pipelines** – Developing reproducible analysis workflows
-
-**Currently seeking opportunities** in bioinformatics, data science, and computational biology roles.
+📧 [dileepgowtham1947@gmail.com](mailto:dileepgowtham1947@gmail.com) • 📍 Bangalore, India
 
 ---
 
 ## 🚀 Featured Projects
 
 ### 🧬 [Cancer Subtype Classifier](https://github.com/gowtham-bioinfo/Cancer-Subtype-Classifier)
-Machine learning model for automated classification of cancer subtypes using gene expression data.
-- **Problem**: Manual cancer classification is time-consuming and prone to error
-- **Solution**: Multi-class ML pipeline with high accuracy
+**Machine learning model for automated cancer subtype classification using gene expression data**
+
+Developed a multi-class classification pipeline to predict cancer subtypes from high-dimensional gene expression datasets. This project demonstrates expertise in feature engineering, model selection, and cross-validation techniques.
+
+- **Problem**: Manual cancer classification is time-consuming and prone to errors
+- **Solution**: Built ML pipeline with multiple classifiers (Random Forest, SVM, Logistic Regression)
+- **Results**: Achieved high accuracy through hyperparameter optimization
 - **Tech Stack**: Python, Scikit-learn, Pandas, NumPy
-- **Key Skills Demonstrated**: Feature engineering, model selection, cross-validation, hyperparameter tuning
+- **Skills**: Feature engineering • Model evaluation • Cross-validation
 
 ### 📊 [Cancer Gene Expression Explorer](https://github.com/gowtham-bioinfo/Cancer-Gene-Expression-Explorer)
-Interactive data analysis pipeline for exploring, preprocessing, and visualizing cancer gene expression datasets.
-- **Features**: Data cleaning, statistical analysis, publication-ready visualizations
-- **Tech Stack**: Python, Pandas, Matplotlib, Seaborn
-- **Key Skills Demonstrated**: Exploratory data analysis, statistical testing, data visualization
+**Interactive data analysis pipeline for exploring cancer gene expression datasets**
+
+Comprehensive analysis workflow for preprocessing, analyzing, and visualizing large-scale cancer genomic data. Produces publication-quality figures and statistical insights.
+
+- **Features**: Data cleaning • Statistical analysis • Advanced visualization
+- **Outputs**: Heatmaps • Volcano plots • Distribution plots
+- **Tech Stack**: Python, Pandas, Matplotlib, Seaborn, NumPy
+- **Skills**: EDA • Statistical testing • Data visualization • Genomic interpretation
 
 ---
 
 ## 🛠️ Technical Skills
 
-### 💻 **Programming & Development**
-- Python (advanced) • SQL • Git/GitHub • Linux/Bash
-
-### 🤖 **Machine Learning & AI**
-- Scikit-learn • Classification models • Regression analysis • Predictive analytics
-- Model evaluation, cross-validation, hyperparameter optimization
-
-### 🧬 **Bioinformatics**
-- Gene expression analysis • Genomic data processing
-- NGS data analysis • Biopython • FASTQ/BAM file handling
-- Sequence alignment and analysis
-
-### 📈 **Data Science & Analysis**
-- Pandas • NumPy • Statistical analysis
-- Feature engineering • Data cleaning & preprocessing
-
-### 📊 **Data Visualization**
-- Matplotlib • Seaborn • Heatmaps, volcano plots, PCA plots
-- Publication-quality figures
+| Category | Skills |
+|----------|--------|
+| **Programming & Development** | Python (Advanced) • SQL • Git/GitHub • Linux/Bash • Jupyter Notebooks |
+| **Machine Learning & AI** | Scikit-learn • Classification & Regression models • Feature Engineering • Model Evaluation • Cross-validation • Hyperparameter Optimization |
+| **Bioinformatics** | Gene expression analysis • Genomic data processing • NGS data analysis • Biopython • FASTQ/BAM file handling • Sequence analysis |
+| **Data Science & Analysis** | Pandas • NumPy • Statistical analysis • Data cleaning • Data preprocessing • Exploratory data analysis |
+| **Data Visualization** | Matplotlib • Seaborn • Publication-quality figures • Heatmaps • Volcano plots • PCA plots • Distribution analysis |
 
 ---
 
@@ -68,71 +52,33 @@ Interactive data analysis pipeline for exploring, preprocessing, and visualizing
 **Bachelor's Degree**: Biotechnology
 
 **Specialized Certifications** (Biotecnika):
-- ✅ **Bioinformatics Methods & Tools** – Core bioinformatics workflows and tools
-- ✅ **NGS Data Analysis** – Next-generation sequencing data processing and interpretation
-- ✅ **Drug Discovery in Bioinformatics** – Computational drug discovery pipelines
+- **Bioinformatics Methods & Tools** – Core bioinformatics workflows and standard tools
+- **NGS Data Analysis** – Next-generation sequencing data processing and interpretation
+- **Drug Discovery in Bioinformatics** – Computational approaches to drug discovery pipelines
 
-These certifications reinforced my knowledge of genomic analysis pipelines, bioinformatics best practices, and industry-standard computational biology workflows.
-
----
-
-## 📫 Get In Touch
-
-I'm always interested in collaborating on bioinformatics projects or discussing opportunities in computational biology!
-
-- **📧 Email**: [dileepgowtham1947@gmail.com](mailto:dileepgowtham1947@gmail.com)
-- **💼 LinkedIn**: [linkedin.com/in/dileep-gowtham-074001313](https://www.linkedin.com/in/dileep-gowtham-074001313)
-- **💻 GitHub**: [github.com/gowtham-bioinfo](https://github.com/gowtham-bioinfo)
-- **📍 Location**: Bangalore, India
+These certifications strengthened understanding of genomic analysis pipelines, bioinformatics best practices, and industry-standard computational biology workflows.
 
 ---
 
-## 🌐 Explore the Portfolio
+## 📊 What I Do Best
 
-Visit the **[live portfolio site](https://gowtham-bioinfo.github.io)** to see detailed project breakdowns, visualizations, and additional resources.
-
-### How to Build & Run Locally
-```bash
-# Clone the repository
-git clone https://github.com/gowtham-bioinfo/gowtham-bioinfo.github.io.git
-cd gowtham-bioinfo.github.io
-
-# Install dependencies (if applicable)
-# For Jekyll-based sites:
-bundle install
-bundle exec jekyll serve
-
-# Open http://localhost:4000 in your browser
-```
+✨ **Genomic Data Analysis** – Process and interpret large-scale sequencing datasets  
+🤖 **Machine Learning for Biology** – Build predictive models for disease classification and biomarker discovery  
+📈 **Data Visualization** – Create meaningful, publication-quality insights from complex datasets  
+🧪 **Bioinformatics Pipelines** – Develop reproducible, well-documented analysis workflows  
 
 ---
 
-## 📝 What You'll Find Here
+## 🌐 Connect & Explore
 
-✨ **Project Repositories** – Well-documented code with detailed explanations  
-📊 **Data Analysis Examples** – Real-world bioinformatics workflows  
-🧪 **ML Models** – Classification, prediction, and clustering implementations  
-📚 **Learning Resources** – Insights from my bioinformatics journey  
+- **Portfolio Website**: [gowtham-bioinfo.github.io](https://gowtham-bioinfo.github.io)
+- **GitHub Profile**: [github.com/gowtham-bioinfo](https://github.com/gowtham-bioinfo)
+- **LinkedIn**: [linkedin.com/in/dileep-gowtham-074001313](https://www.linkedin.com/in/dileep-gowtham-074001313)
+- **Email**: dileepgowtham1947@gmail.com
 
----
+Actively seeking opportunities in **bioinformatics**, **data science**, and **computational biology** roles.
 
-## 💡 Philosophy
 
-> "Computational biology is the bridge between raw data and biological understanding."
 
-I believe in:
-- **Reproducibility** – Clear documentation and version control
-- **Best Practices** – Clean code, proper testing, and thorough analysis
-- **Continuous Learning** – Staying updated with bioinformatics advancements
-- **Real-World Impact** – Creating tools that solve actual biological problems
 
----
 
-## 📄 License
-
-This portfolio and its contents are available under the MIT License. See individual project repositories for specific licensing information.
-
----
-
-**Made with ❤️ by Dileep Gowtham**  
-*Last updated: 2026*
