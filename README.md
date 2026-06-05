@@ -37,13 +37,20 @@ Comprehensive analysis workflow for preprocessing, analyzing, and visualizing la
 
 ## 🛠️ Technical Skills
 
-| Category | Skills |
-|----------|--------|
-| **Programming & Development** | Python (Advanced) • SQL • Git/GitHub • Linux/Bash • Jupyter Notebooks |
-| **Machine Learning & AI** | Scikit-learn • Classification & Regression models • Feature Engineering • Model Evaluation • Cross-validation • Hyperparameter Optimization |
-| **Bioinformatics** | Gene expression analysis • Genomic data processing • NGS data analysis • Biopython • FASTQ/BAM file handling • Sequence analysis |
-| **Data Science & Analysis** | Pandas • NumPy • Statistical analysis • Data cleaning • Data preprocessing • Exploratory data analysis |
-| **Data Visualization** | Matplotlib • Seaborn • Publication-quality figures • Heatmaps • Volcano plots • PCA plots • Distribution analysis |
+### 💻 Programming & Development
+`Python (Advanced)` `SQL` `Git/GitHub` `Linux/Bash` `Jupyter Notebooks`
+
+### 🤖 Machine Learning & AI
+`Scikit-learn` `Classification Models` `Regression Analysis` `Feature Engineering` `Cross-validation` `Hyperparameter Tuning` `Model Evaluation`
+
+### 🧬 Bioinformatics
+`Gene Expression Analysis` `Genomic Data Processing` `NGS Data Analysis` `Biopython` `FASTQ/BAM Files` `Sequence Alignment` `Biological Data Interpretation`
+
+### 📊 Data Science & Analysis
+`Pandas` `NumPy` `Statistical Analysis` `Data Cleaning` `Data Preprocessing` `Exploratory Data Analysis` `Statistical Testing`
+
+### 📈 Data Visualization
+`Matplotlib` `Seaborn` `Heatmaps` `Volcano Plots` `PCA Plots` `Distribution Analysis` `Publication-Quality Figures`
 
 ---
 
@@ -77,8 +84,6 @@ These certifications strengthened understanding of genomic analysis pipelines, b
 - **Email**: dileepgowtham1947@gmail.com
 
 Actively seeking opportunities in **bioinformatics**, **data science**, and **computational biology** roles.
-
-
 
 
 
